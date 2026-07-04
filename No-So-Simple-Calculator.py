@@ -25,7 +25,60 @@ while True:
     choice = input("\nEnter your choice: ")
 
     if choice == "1":
-        print("Basic Arithmetics - Coming Soon")
+        
+        while True:
+            print("\n" + "=" * 40)
+            print("      BASIC ARITHMETICS")
+            print("=" * 40)
+
+            print("1. Addition")
+            print("2. Subtraction")
+            print("3. Multiplication")
+            print("4. Division")
+            print("5. Percentage")
+            print("0. Back to Main Menu")
+
+            basic_choice = input("\nEnter your choice: ")
+
+            if basic_choice == "1":
+                a = float(input("Enter first number: "))
+                b = float(input("Enter second number: "))
+                print("Result =", a + b)
+
+            elif basic_choice == "2":
+                a = float(input("Enter first number: "))
+                b = float(input("Enter second number: "))
+                print("Result =", a - b)
+
+            elif basic_choice == "3":
+                a = float(input("Enter first number: "))
+                b = float(input("Enter second number: "))
+                print("Result =", a * b)
+
+            elif basic_choice == "4":
+                a = float(input("Enter dividend: "))
+                b = float(input("Enter divisor: "))
+
+                if b == 0:
+                    print("Error! Division by zero is not allowed.")
+                else:
+                    print("Result =", a / b)
+
+            elif basic_choice == "5":
+                value = float(input("Enter the value: "))
+                total = float(input("Enter the total value: "))
+
+                if total == 0:
+                    print("Error! Total cannot be zero.")
+                else:
+                    percentage = (value / total) * 100
+                    print("Percentage =", percentage, "%")
+
+            elif basic_choice == "0":
+                break
+
+            else:
+                print("Invalid choice! Please try again.")
 
     elif choice == "2":
         print("Advanced Arithmetics - Coming Soon")
